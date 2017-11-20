@@ -1,0 +1,11 @@
+.float-left{
+    float: left;
+    /*background: #f7ff2b;*/
+    border: solid;
+}
+.inline{
+    display: inline;
+}
+.ghost {
+    color: white;
+}
