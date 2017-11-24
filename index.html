@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sounding tables for tanks at M/V SZARE SZEREGI">
+    <meta name="author" content="Paweł Skokowski github.com/skokeers27">
+    <title>Sounding Tables M/V SZARE SZEREGI</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="col-lg-10 col-lg-offset-1 text-center">
+    <h2 class="section-heading">Let's sound the tank!</h2>
+    <hr class="light">
+    <p class="text-faded">First give me actual trim with 0,5m precision from 1,0 (BOW) to 3,0 (STERN), then give me your manual sounding value with 1 cm precision. </p>
+    <button class="btn btn-default btn-m sr-button trim" data-value="BOW10">1,0m BOW</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="BOW05">0,5m BOW</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="EVEN">0m EVEN</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="STERN05">0,5m STERN</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="STERN10">1,0m STERN</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="STERN15">1,5m STERN</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="STERN20">2,0m STERN</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="STERN25">2,5m STERN</button>
+    <button class="btn btn-default btn-m sr-button trim" data-value="STERN30">3,0m STERN</button>
+</div>
+
+<div class="col-lg-10 col-lg-offset-1 text-center">
+
+    <hr class="light">
+
+    <div class="col-lg-5 float-left">
+        <h3 class="text-center"> Sludge Tank</h3>
+
+        <label for="sludgeTank">Value in cm:</label>
+        <input id="sludgeTank" type="number" required>
+        <button id="sludgeTankButton" class="btn btn-default btn-m sr-button center-block">Calculate!</button>
+        <h4 class="text-center" id="sludgeTankResult"></h4>
+    </div>
+
+    <div class="col-lg-5 col-lg-offset-2 float-left">
+        <h3 class="text-center">Waste Oil Tank</h3>
+        <label for="WasteTK">Value in cm:</label>
+        <input id="WasteTK" type="number">
+        <button class="btn btn-default btn-m sr-button center-block">Calculate!</button>
+        <h4 class="text-center" id="WasteTKresult">You have x m3 in tank. <br> Wicht is x % it's volume.</h4>
+    </div>
+
+    <div>
+        <p class="ghost">Ordering 2 tanks in row</p>
+    </div>
+
+    <div class="col-lg-5 float-left">
+        <h3 class="text-center">Leakage Oil Tank</h3>
+        <label for="LeakageTK">Value in cm:</label>
+        <input id="LeakageTK" type="number">
+        <button class="btn btn-default btn-m sr-button center-block">Calculate!</button>
+        <h4 class="text-center" id="LeakageTKresult">You have x m3 in tank. <br> Wicht is x % of it's volume.</h4>
+    </div>
+
+
+    <div class="col-lg-5 col-lg-offset-2 float-left">
+        <h3 class="text-center">Bilge Water Collecting Tank No. 1</h3>
+        <label for="Bilge1TK">Value in cm:</label>
+        <input id="Bilge1TK" type="number">
+        <button class="btn btn-default btn-m sr-button center-block">Calculate!</button>
+        <h4 class="text-center" id="Bilge1TKresult">You have x m3 in tank. <br> Wicht is x % of it's volume.</h4>
+    </div>
+
+    <div>
+        <p class="ghost">Ordering 2 tanks in row</p>
+    </div>
+
+    <div class="col-lg-5 float-left">
+        <h3 class="text-center">Bilge Water Collecting Tank No. 2</h3>
+        <label for="Bilge2TK">Value in cm:</label>
+        <input id="Bilge2TK" type="number">
+        <button class="btn btn-default btn-m sr-button center-block">Calculate!</button>
+        <h4 class="text-center" id="Bilge2TKresult">You have x m3 in tank. <br> Wicht is x % of it's volume.</h4>
+    </div>
+
+
+
+</div>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tables.js"></script>
+<script src="js/calculations.js"></script>
+</body>
+</html>
